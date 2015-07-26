@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class InversionCounter {
 
+	private static Scanner scanner;
+
 	public static long countInversions(long[] array) {
 		SortData result = sortAndCount(array);
 		return result.count;
@@ -54,7 +56,7 @@ public class InversionCounter {
 	}
 
 	public static void main (String[] args) throws FileNotFoundException {
-		Scanner scanner = new Scanner(new File("integerArray.txt"));
+		scanner = new Scanner(new File("integerArray.txt"));
 		ArrayList<Integer> a = new ArrayList<Integer>();
 		while(scanner.hasNextInt()){
 		   a.add(scanner.nextInt());
